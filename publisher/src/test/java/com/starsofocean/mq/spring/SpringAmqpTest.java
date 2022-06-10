@@ -33,4 +33,22 @@ public class SpringAmqpTest {
         String message="hello!";
         rabbitTemplate.convertAndSend(exchangeName,"",message);
     }
+    @Test
+    public void sendMsg2DirectExchangeBlue(){
+        String exchangeName="starsofocean.direct";
+        String message="hello,blue!";
+        rabbitTemplate.convertAndSend(exchangeName,"blue",message);
+    }
+    @Test
+    public void sendMsg2DirectExchangeBlack(){
+        String exchangeName="starsofocean.direct";
+        String message="hello,black!";
+        rabbitTemplate.convertAndSend(exchangeName,"black",message);
+    }
+    @Test
+    public void sendMsg2DirectExchangeRed(){
+        String exchangeName="starsofocean.direct";
+        String message="hello,red!";
+        rabbitTemplate.convertAndSend(exchangeName,"red",message);
+    }
 }
