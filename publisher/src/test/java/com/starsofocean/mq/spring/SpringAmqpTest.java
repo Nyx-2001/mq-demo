@@ -51,4 +51,28 @@ public class SpringAmqpTest {
         String message="hello,red!";
         rabbitTemplate.convertAndSend(exchangeName,"red",message);
     }
+    @Test
+    public void sendMsg2TopicExchangeChinaNews(){
+        String exchangeName="starsofocean.topic";
+        String message="hello,China.news";
+        rabbitTemplate.convertAndSend(exchangeName,"China.news",message);
+    }
+    @Test
+    public void sendMsg2TopicExchangeChinaWeather(){
+        String exchangeName="starsofocean.topic";
+        String message="hello,China.weather";
+        rabbitTemplate.convertAndSend(exchangeName,"China.weather",message);
+    }
+    @Test
+    public void sendMsg2TopicExchangeUKNews(){
+        String exchangeName="starsofocean.topic";
+        String message="hello,UK.news";
+        rabbitTemplate.convertAndSend(exchangeName,"UK.news",message);
+    }
+    @Test
+    public void sendMsg2TopicExchangeUKWeather(){
+        String exchangeName="starsofocean.topic";
+        String message="hello,UK.weather";
+        rabbitTemplate.convertAndSend(exchangeName,"UK.weather",message);
+    }
 }
